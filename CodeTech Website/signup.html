@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | CodeTech</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #141e30, #243b55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .signup-container {
+      background: #ffffff10;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 40px 50px;
+      border-radius: 12px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .signup-container .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .signup-container .logo img {
+      width: 60px;
+    }
+
+    .signup-container .logo h2 {
+      margin: 10px 0 0;
+      font-size: 26px;
+      color: #fff;
+    }
+
+    .signup-container h3 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .signup-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .signup-container input[type="text"],
+    .signup-container input[type="email"],
+    .signup-container input[type="password"] {
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .signup-container button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: linear-gradient(to right, #00b4db, #0083b0);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .signup-container button:hover {
+      background: linear-gradient(to right, #0083b0, #00b4db);
+    }
+
+    .signup-container .note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="CodeTech Logo" />
+      <h2>CodeTech</h2>
+    </div>
+    <h3>Create a New Account</h3>
+    <form id="signupForm">
+      <input type="text" id="fullname" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="note">Already have an account? <a href="login.html" style="color:#00b4db;">Login</a></div>
+  </div>
+
+  <script>
+    const signupForm = document.getElementById("signupForm");
+    signupForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("fullname").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (name && email && username && password) {
+        // In a real app, you'd send this data to a server
+        alert("Signup successful! Redirecting to Home page...");
+        window.location.href = "index.html";
+      } else {
+        alert("Please fill in all fields.");
+      }
+    });
+  </script>
+
+</body>
+</html>

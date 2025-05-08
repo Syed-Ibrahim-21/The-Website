@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Projects | CodeTech</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" type="image/png" />
+  <style>
+    /* Sliding Effect */
+    .projects-container {
+      display: flex;
+      overflow-x: scroll;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .project-card {
+      min-width: 300px;
+      background-color: #f7f7f7;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .project-card .content {
+      padding: 1rem;
+    }
+
+    .project-card .content h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card .content p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Styling for smooth slide effect */
+    .projects-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .projects-container {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="CodeTech Logo">
+        <h1>CodeTech</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn login">Login</a>
+        <a href="signup.html" class="btn signup">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section class="hero about-hero">
+    <div class="container hero-content">
+      <div class="text">
+        <h2>Our Projects</h2>
+        <p>Explore some of our best work, where we brought digital ideas to life through innovation and precision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Slider -->
+  <section class="projects">
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="Images/Project1.png" alt="Project 1" />
+        <div class="content">
+          <h3>E-Commerce Platform</h3>
+          <p>A scalable and responsive e-commerce platform built for high traffic.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="Images/Project2.png" alt="Project 2" />
+        <div class="content">
+          <h3>FinTech Solution</h3>
+          <p>An AI-powered financial solution for better investment management.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="Images/Project3.png" alt="Project 3" />
+        <div class="content">
+          <h3>Mobile App Development</h3>
+          <p>A native app for seamless mobile commerce on Android and iOS.</p>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img src="/Images/Project4.png" alt="Project 4" />
+        <div class="content">
+          <h3>AI-Powered Analytics</h3>
+          <p>Leveraging machine learning for in-depth data analysis and insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="CodeTech">
+        <p>&copy; 2025 CodeTech. All rights reserved.</p>
+      </div>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384028.png" alt="YouTube"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

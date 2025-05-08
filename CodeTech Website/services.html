@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | CodeTech</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Slider */
+    .slider-section {
+      margin: 40px auto;
+      max-width: 1000px;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      padding: 30px;
+      text-align: center;
+    }
+    .slide img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+    .slide h3 {
+      margin-bottom: 10px;
+      color: #0d1a26;
+    }
+    .slide p {
+      color: #444;
+    }
+    .slider-buttons {
+      position: absolute;
+      top: 50%;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .slider-buttons button {
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .slider-buttons button:hover {
+      background: #00d1b2;
+    }
+
+    /* Services Section */
+    .services-section {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    .services-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #0d1a26;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .service-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #0d1a26;
+    }
+    .service-card p {
+      color: #555;
+    }
+    .main-text {
+      padding-top: 30px;
+      text-align: center;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="CodeTech Logo">
+        <h1>CodeTech</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <h2 class="main-text">Our Core Services</h2>
+  <section class="slider-section">
+    <div class="slider-track" id="slider">
+      <div class="slide">
+        <img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png" alt="Web Dev">
+        <h3>Custom Web Development</h3>
+        <p>Modern, scalable web applications using latest frontend and backend tech.</p>
+      </div>
+      <div class="slide">
+        <img src="https://cdn-icons-png.flaticon.com/512/9432/9432826.png" alt="Mobile Dev">
+        <h3>Mobile App Development</h3>
+        <p>Native and hybrid apps built with Flutter, React Native, or Kotlin.</p>
+      </div>
+      <div class="slide">
+        <img src="https://cdn-icons-png.flaticon.com/512/2942/2942809.png" alt="Consulting">
+        <h3>IT Consulting & Strategy</h3>
+        <p>Helping companies align technology with business goals.</p>
+      </div>
+    </div>
+    <div class="slider-buttons">
+      <button onclick="prevSlide()">&#8678;</button>
+      <button onclick="nextSlide()">&#8680;</button>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Cloud Infrastructure</h3>
+        <p>Build and manage cloud solutions with AWS, Azure, or GCP including Kubernetes & Docker orchestration.</p>
+      </div>
+      <div class="service-card">
+        <h3>UI/UX Design</h3>
+        <p>Crafting user-friendly and visually engaging designs for mobile and web platforms.</p>
+      </div>
+      <div class="service-card">
+        <h3>DevOps Services</h3>
+        <p>End-to-end CI/CD pipelines, automation scripts, infrastructure as code, monitoring and performance tuning.</p>
+      </div>
+      <div class="service-card">
+        <h3>Software Maintenance</h3>
+        <p>Long-term support, optimization, updates and refactoring of legacy applications.</p>
+      </div>
+      <div class="service-card">
+        <h3>AI & Machine Learning</h3>
+        <p>Custom AI solutions including recommendation systems, computer vision, and NLP tools.</p>
+      </div>
+      <div class="service-card">
+        <h3>Security & Pen Testing</h3>
+        <p>We conduct vulnerability assessments, code reviews, and penetration testing to secure applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="CodeTech">
+        <p>&copy; 2025 CodeTech. All rights reserved.</p>
+      </div>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384028.png" alt="YouTube"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slider = document.getElementById('slider');
+
+    function updateSlider() {
+      slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
+  </script>
+</body>
+</html>
